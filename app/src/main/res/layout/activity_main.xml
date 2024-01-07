@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background"
+    >
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:alpha="0.8"
+        android:background="@drawable/roundstyle"
+        android:drawableRight="@drawable/wifi1"
+        android:fontFamily="serif"
+        android:text="EBENEZA"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/label2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_toEndOf="@+id/textView"
+        android:alpha="0.8"
+        android:background="@drawable/roundstyle"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="FIBER"
+        android:textAlignment="center"
+        android:textColor="@color/poster_background"
+        android:textSize="28dp"
+        android:textStyle="bold" />
+
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="100dp"
+        android:alpha="0.7"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/poster_background"
+        android:background="@drawable/roundstyle">
+
+        <RelativeLayout
+            android:id="@+id/rlayout"
+            android:layout_width="wrap_content"
+            android:importantForAutofill="noExcludeDescendants"
+            android:background="@drawable/roundstyle"
+            android:layout_height="400dp">
+
+
+            <EditText
+                android:id="@+id/account"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:autofillHints="name"
+                android:drawableRight="@drawable/wifiprof"
+                android:drawablePadding="10dp"
+                android:ems="8"
+                android:fontFamily="serif"
+                android:hint="Account Number"
+                android:inputType="text"
+                android:maxEms="20"
+                android:maxLines="1"
+                android:paddingTop="10dp"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textColorHighlight="#EAE6E6"
+                android:textSize="24sp"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/account"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="100dp"
+                android:drawableRight="@drawable/wifipassword"
+                android:drawablePadding="10dp"
+                android:ems="8"
+                android:fontFamily="serif"
+                android:hint="Password/ID Number"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingTop="10dp"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#F295E60D"
+                android:paddingTop="10dp"
+                android:text="Ok"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/passforg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guest"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#F295E60D"
+                android:text="Forgot password!"
+                android:textSize="24sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/guest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#F295E60D"
+                android:hapticFeedbackEnabled="false"
+                android:text="Guest!"
+                android:textSize="24sp"
+                android:textStyle="italic" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/roundstyle"
+        android:alpha="0.7"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/scrollview"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:srcCompat="@drawable/poster" />
+
+    <LinearLayout
+        android:id="@+id/buttonslayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/facebook">
+
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/gmail">
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:src="@drawable/twitter">
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:src="@drawable/instagram">
+
+        </ImageButton>
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="161dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="3dp"
+        android:backgroundTint="@color/back3"
+        android:fontFamily="sans-serif"
+        android:alpha="0.8"
+        android:text="CLIENT LOGIN"
+        android:textAlignment="center"
+        android:textColor="@color/back1"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+
+
+</RelativeLayout>
